@@ -3,7 +3,11 @@ var NumArray = function(nums) {
 };
 
 NumArray.prototype.sumRange = function(i, j) {
-  return this.arr.slice(i,j+1).reduce((acc, curr) => acc+curr)
+  let sum = 0;
+  for (let start = i ; start < j + 1; start++){
+    sum += this.arr[start];
+  }
+  return sum;
 };
 
 
