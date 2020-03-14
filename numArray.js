@@ -2,6 +2,11 @@ var NumArray = function(nums) {
   this.arr = [...nums]  
 };
 
+// update(i, val) function modifies nums by updating the element at index i to val.
+NumArray.prototype.update = function(i, val) {
+    this.arr[i] = val;
+};
+
 NumArray.prototype.sumRange = function(i, j) {
   let sum = 0;
   for (let start = i ; start < j + 1; start++){
